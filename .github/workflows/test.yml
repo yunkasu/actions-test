@@ -1,4 +1,4 @@
-name: Basic GitHub Actions Test
+name: わかりやすいGitHub Actions テスト
 
 on:
   push:
@@ -7,24 +7,76 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test:
+  demo:
+    name: デモンストレーション
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
+    - name: 📁 コードをチェックアウト
       uses: actions/checkout@v4
       
-    - name: Print Hello World
-      run: echo "Hello, GitHub Actions!"
-      
-    - name: Check files
-      run: ls -la
-      
-    - name: Validate HTML
+    - name: 👋 挨拶メッセージ
       run: |
+        echo "========================================="
+        echo "🎉 GitHub Actions が正常に動作しています！"
+        echo "========================================="
+        echo "実行日時: $(date)"
+        echo "実行者: ${{ github.actor }}"
+        echo "ブランチ: ${{ github.ref_name }}"
+        
+    - name: 🗂️ ファイル一覧を表示
+      run: |
+        echo "========================================="
+        echo "📂 プロジェクトのファイル一覧:"
+        echo "========================================="
+        ls -la --color=never
+        echo ""
+        echo "ファイル数: $(find . -type f | wc -l) 個"
+        echo "フォルダ数: $(find . -type d | wc -l) 個"
+        
+    - name: 📄 HTMLファイルの内容確認
+      run: |
+        echo "========================================="
+        echo "🔍 HTMLファイルの詳細情報:"
+        echo "========================================="
         if [ -f "article.html" ]; then
-          echo "article.html found"
-          head -10 article.html
+          echo "✅ article.html が見つかりました"
+          echo "📏 ファイルサイズ: $(du -h article.html | cut -f1)"
+          echo "📝 行数: $(wc -l < article.html) 行"
+          echo ""
+          echo "📖 ファイルの最初の5行:"
+          echo "----------------------------------------"
+          head -5 article.html
+          echo "----------------------------------------"
         else
-          echo "article.html not found"
+          echo "❌ article.html が見つかりませんでした"
         fi
+        
+    - name: 🧪 簡単なテスト実行
+      run: |
+        echo "========================================="
+        echo "🔬 基本的なテストを実行中..."
+        echo "========================================="
+        
+        # HTMLファイルの基本チェック
+        if grep -q "<html" article.html; then
+          echo "✅ HTMLタグが見つかりました"
+        else
+          echo "❌ HTMLタグが見つかりませんでした"
+        fi
+        
+        if grep -q "<title" article.html; then
+          echo "✅ titleタグが見つかりました"
+        else
+          echo "❌ titleタグが見つかりませんでした"
+        fi
+        
+        echo ""
+        echo "🎯 テスト完了！"
+        
+    - name: 🎊 実行完了メッセージ
+      run: |
+        echo "========================================="
+        echo "🚀 GitHub Actions の実行が完了しました！"
+        echo "========================================="
+        echo "お疲れさまでした！全ての処理が正常に完了しました。"
