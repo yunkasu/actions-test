@@ -5,6 +5,11 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  schedule:
+    # 毎日午前9時（JST）に実行（UTC 00:00）
+    - cron: '0 0 * * *'
+  # 手動実行も可能
+  workflow_dispatch:
 
 jobs:
   demo:
@@ -23,6 +28,14 @@ jobs:
         echo "実行日時: $(date)"
         echo "実行者: ${{ github.actor }}"
         echo "ブランチ: ${{ github.ref_name }}"
+        echo "実行理由: ${{ github.event_name }}"
+        if [ "${{ github.event_name }}" = "schedule" ]; then
+          echo "⏰ 定期実行によるワークフロー実行です"
+        elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          echo "🖱️ 手動実行によるワークフロー実行です"
+        elif [ "${{ github.event_name }}" = "push" ]; then
+          echo "📤 プッシュによるワークフロー実行です"
+        fi
         
     - name: 🗂️ ファイル一覧を表示
       run: |
