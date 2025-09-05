@@ -1,0 +1,30 @@
+name: Basic GitHub Actions Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Print Hello World
+      run: echo "Hello, GitHub Actions!"
+      
+    - name: Check files
+      run: ls -la
+      
+    - name: Validate HTML
+      run: |
+        if [ -f "article.html" ]; then
+          echo "article.html found"
+          head -10 article.html
+        else
+          echo "article.html not found"
+        fi

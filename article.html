@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBL BAR 300 MK2徹底レビュー：映画館級の音響体験を自宅で実現 - TECH NEWS TODAY</title>
+    <meta name="description"
+        content="Dolby Atmos対応、マルチビーム技術ver.3.0搭載で価格は59,800円。実際に3か月間使用したプロの音響評論家が、その圧倒的な音質とコストパフォーマンスを詳しく解説します。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #f8fafc;
+            --accent-color: #dc2626;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --breaking-color: #ef4444;
+            --urgent-color: #f59e0b;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Breaking News Banner */
+        .breaking-banner {
+            background: var(--breaking-color);
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 3px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-top {
+            background: var(--secondary-color);
+            padding: 8px 0;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .header-top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .date-info {
+            font-weight: 500;
+        }
+
+        .weather-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-main {
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-family: 'Times New Roman', serif;
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 16px;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .header-nav a:hover,
+        .header-nav a.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--secondary-color);
+            padding: 12px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+            margin: 32px auto;
+        }
+
+        .article-container {
+            background: white;
+        }
+
+        /* Article Header */
+        .article-header {
+            margin-bottom: 32px;
+        }
+
+        .article-category {
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 16px;
+            border-radius: 12px;
+        }
+
+        .article-title {
+            font-size: 42px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            font-family: 'Times New Roman', serif;
+        }
+
+        .article-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            font-weight: normal;
+            line-height: 1.4;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 16px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .meta-author {
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        /* Article Image */
+        .article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin: 32px 0;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 18px;
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: linear-gradient(135deg, #ff9500, #ff6600);
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 32px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '📰 特別価格';
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 10px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .product-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .product-price {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .product-old-price {
+            font-size: 16px;
+            text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+
+        .product-button {
+            background: white;
+            color: #ff6600;
+            border: none;
+            padding: 12px 24px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            margin-top: 8px;
+        }
+
+        .product-button:hover {
+            background: #f0f0f0;
+            transform: translateY(-1px);
+        }
+
+        /* External Article Widget Style */
+        .external-article-widget {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 32px 0;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+        }
+
+        .external-article-widget-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .external-article-widget-title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .external-article-widget-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-style: normal;
+            line-height: 1.4;
+        }
+
+        .external-article-widget-url {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-style: normal;
+        }
+
+        .external-article-widget-price {
+            margin-bottom: 16px;
+        }
+
+        .external-article-widget-regularprice {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--text-primary);
+            font-style: normal;
+        }
+
+        .external-article-widget-currency {
+            font-size: 16px;
+        }
+
+        .external-article-widget-update {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-style: normal;
+            display: block;
+            margin-top: 4px;
+        }
+
+        .external-article-widget-disclaimer {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .external-article-widget-button {
+            margin-top: auto;
+        }
+
+        .a-button {
+            display: block;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .a-button:hover {
+            background: #1e3a8a;
+        }
+
+        .a-button__inner {
+            padding: 6px 24px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .a-button__label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .external-article-widget-image {
+            width: 200px;
+            height: 200px;
+            flex-shrink: 0;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            order: -1;
+        }
+
+        .external-article-widget-productImage {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+        }
+
+        /* Comparison Card */
+        .comparison-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 32px 0;
+            overflow: hidden;
+        }
+
+        .comparison-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 16px 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .comparison-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .comparison-item {
+            padding: 20px;
+            border-right: 1px solid var(--border-color);
+        }
+
+        .comparison-item:last-child {
+            border-right: none;
+        }
+
+        .comparison-item h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .comparison-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .comparison-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        .comparison-features {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+
+        .comparison-features li {
+            padding: 4px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .comparison-features li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* Feature Card */
+        .feature-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 32px 0;
+            padding: 24px;
+            position: relative;
+        }
+
+        .feature-card.positive {
+            border-left: 4px solid #10b981;
+        }
+
+        .feature-card.negative {
+            border-left: 4px solid #ef4444;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Price Comparison Card */
+        .price-comparison-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 32px 0;
+            overflow: hidden;
+        }
+
+        .price-comparison-header {
+            background: var(--secondary-color);
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .price-comparison-header h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .price-comparison-content {
+            padding: 20px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .store-name {
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        .store-price {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .store-status {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: white;
+        }
+
+        .store-status.in-stock {
+            background: #10b981;
+        }
+
+        .store-status.out-of-stock {
+            background: #ef4444;
+        }
+
+        /* Review Rating Card */
+        .review-rating-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 32px 0;
+            padding: 24px;
+        }
+
+        .rating-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .rating-score {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 4px;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 20px;
+        }
+
+        .rating-count {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .rating-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .rating-item {
+            text-align: center;
+        }
+
+        .rating-item-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .rating-item-score {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--text-primary);
+        }
+
+        /* Accessory Card */
+        .accessory-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 8px;
+            margin: 32px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .accessory-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .accessory-info {
+            flex: 1;
+        }
+
+        .accessory-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .accessory-description {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .accessory-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Inline CTA */
+        .cta-inline {
+            background: linear-gradient(135deg, #ff9500, #ff6600);
+            color: white;
+            padding: 4px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0 4px;
+            white-space: nowrap;
+        }
+
+        .cta-inline:hover {
+            background: linear-gradient(135deg, #e6850e, #e65a00);
+            transform: translateY(-1px);
+        }
+
+        /* Article Content */
+        .article-content {
+            font-size: 18px;
+            line-height: 1.8;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .article-content h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 40px 0 20px 0;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+        }
+
+        .article-content h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 32px 0 16px 0;
+            color: var(--text-primary);
+        }
+
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 32px 0;
+            font-style: italic;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: '"';
+            font-size: 48px;
+            color: var(--primary-color);
+            position: absolute;
+            top: 10px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        .quote-content {
+            margin-left: 40px;
+        }
+
+        .quote-author {
+            font-weight: bold;
+            margin-top: 12px;
+            font-style: normal;
+            color: var(--text-primary);
+        }
+
+        /* Specs Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .specs-table th,
+        .specs-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .specs-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+
+        .specs-table tr:nth-child(even) {
+            background: var(--secondary-color);
+        }
+
+        /* Social Share */
+        .social-share {
+            display: flex;
+            gap: 8px;
+            margin: 32px 0;
+            padding: 16px;
+            background: var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        .social-share span {
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .social-button {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .twitter {
+            background: #1da1f2;
+        }
+
+        .facebook {
+            background: #4267b2;
+        }
+
+        .line {
+            background: #00b900;
+        }
+
+        /* Related Articles */
+        .related-articles {
+            background: var(--secondary-color);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+
+        .related-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .related-list {
+            list-style: none;
+        }
+
+        .related-list li {
+            margin-bottom: 12px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .related-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 12px;
+        }
+
+        .related-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .related-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-section {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 16px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .sidebar-content {
+            padding: 16px;
+        }
+
+        .news-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .news-item h4 a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .news-item h4 a:hover {
+            color: var(--primary-color);
+        }
+
+        .news-time {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+
+        .footer-section h4 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .article-title {
+                font-size: 32px;
+            }
+
+            .article-subtitle {
+                font-size: 18px;
+            }
+
+            .header-nav {
+                display: none;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            /* External Article Widget Responsive */
+            .external-article-widget {
+                flex-direction: column;
+            }
+
+            .external-article-widget-image {
+                width: 100%;
+                height: 200px;
+                order: -1;
+            }
+
+            .external-article-widget-content {
+                padding: 16px;
+            }
+
+            /* Comparison Card Responsive */
+            .comparison-content {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-item {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .comparison-item:last-child {
+                border-bottom: none;
+            }
+
+            /* Rating Breakdown Responsive */
+            .rating-breakdown {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Accessory Card Responsive */
+            .accessory-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .accessory-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo">TECH NEWS TODAY</a>
+                    <nav class="header-nav">
+                        <a href="index.html">ホーム</a>
+                        <a href="category.html?cat=audio" class="active">オーディオ</a>
+                        <a href="category.html?cat=mobile">スマートフォン</a>
+                        <a href="category.html?cat=pc">PC・タブレット</a>
+                        <a href="category.html?cat=gaming">ゲーミング</a>
+                        <a href="category.html?cat=smart">スマートホーム</a>
+                        <a href="category.html?cat=sale">セール情報</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">ホーム</a> › <a href="category.html?cat=audio">オーディオ機器</a> › JBL BAR 300 MK2レビュー
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-layout">
+            <main class="article-container">
+                <div class="article-header">
+                    <div class="article-category">製品レビュー</div>
+                    <h1 class="article-title">JBL BAR 300 MK2徹底レビュー：映画館級の音響体験を自宅で実現</h1>
+                    <h2 class="article-subtitle">Dolby Atmos対応、マルチビーム技術ver.3.0搭載で価格は59,800円</h2>
+
+                    <div class="article-meta">
+                        <div class="meta-item">
+                            <span>📅</span>
+                            <span>2024年9月4日 09:30</span>
+                        </div>
+                        <div class="meta-item">
+                            <span>⏱</span>
+                            <span>読了時間: 8分</span>
+                        </div>
+                        <div class="meta-item">
+                            <span>👁</span>
+                            <span>24,582 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-image"><img
+                        src="https://assets.st-note.com/production/uploads/images/212945929/rectangle_large_type_2_840579d233d74575515b5812e45b1208.jpeg?width=1200"
+                        alt="JBL BAR 300 MK2" class="article-image"></div>
+                <div class="product-card">
+                    <div class="product-content">
+                        <div class="product-title">🔥 JBL BAR 300 MK2</div>
+                        <div class="product-price">¥59,800</div>
+                        <div class="product-old-price">メーカー希望価格 ¥69,800</div>
+                        <a href="https://amazon.co.jp/dp/B0CQJQ8P3Q" class="product-button">Amazonで詳細を見る</a>
+                    </div>
+                </div>
+
+                <div class="article-content">
+                    <p>テレビの薄型化が進む中、音質の物足りなさを感じている方は多いのではないでしょうか。そんな悩みを一気に解決してくれるのが、JBLの最新サウンドバー「BAR 300
+                        MK2」です。筆者が実際に3か月間使用した経験をもとに、この製品の魅力を余すところなくお伝えします。</p>
+
+                    <h2>開封から設置まで：驚くほど簡単なセットアップ</h2>
+
+                    <p>箱を開けた瞬間、その洗練されたデザインに目を奪われました。マットブラックの筐体は高級感があり、どんなリビングにも自然に溶け込みます。重量は3.6kgと適度な重さで、品質の高さを物語っています。
+                    </p>
+
+                    <p>セットアップは拍子抜けするほど簡単でした。付属のHDMIケーブル一本でテレビと接続するだけで、eARC機能により高品質な音声信号が自動的に伝送されます。
+                        複雑な配線作業は一切不要で、機械に詳しくない方でも10分程度で完了できるでしょう。</p>
+
+                    <div class="external-article-widget">
+                        <div class="external-article-widget-content">
+                            <strong class="external-article-widget-title">
+                                JBL BAR 300 MK2 サウンドバー Dolby Atmos対応/マルチビーム技術ver.3.0/9基スピーカー搭載/テレビ用/HDMI
+                                eARC対応/Bluetooth 5.0/Wi-Fi/AirPlay 2対応
+                            </strong>
+                            <div class="external-article-widget-price">
+                                <em class="external-article-widget-regularprice">59,800<span
+                                        class="external-article-widget-currency">円</span></em>
+                            </div>
+                            <div class="external-article-widget-button">
+                                <a href="https://amazon.co.jp/dp/B0CQJQ8P3Q" class="a-button" target="_blank"
+                                    rel="noopener noreferrer nofollow">
+                                    <div class="a-button__inner">
+                                        <span class="a-button__label">Amazonで詳細を見る</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="external-article-widget-image" href="https://amazon.co.jp/dp/B0CQJQ8P3Q"
+                            target="_blank" rel="noopener noreferrer nofollow">
+                            <span class="external-article-widget-productImage"
+                                style="background-image: url(https://m.media-amazon.com/images/I/61Q8Q8Q8Q8L._AC_SL1500_.jpg);"></span>
+                        </a>
+                    </div>
+
+                    <h2>音質レビュー：期待を遥かに超える音響体験</h2>
+
+                    <h3>Dolby Atmos対応：立体音響の衝撃</h3>
+                    <p>初めてDolby Atmos対応のコンテンツを再生した時の感動は忘れられません。従来のサラウンドシステムでは左右と前後の音の移動しか表現できませんでしたが、BAR 300
+                        MK2では頭上を通り抜ける音や、空間全体を包み込むような音場を実現します。</p>
+
+                    <p>映画「トップガン マーヴェリック」の戦闘機シーンでは、ジェット機が頭上を駆け抜ける音が本当にリアルに聞こえ、まるで映画館にいるような臨場感を味わえました。</p>
+
+                    <div class="product-card">
+                        <div class="product-content">
+                            <div class="product-title">🎬 映画体験が劇的に変わる</div>
+                            <p style="margin: 16px 0; font-size: 14px;">Dolby Atmos対応で立体音響を実現</p>
+                            <a href="https://amazon.co.jp/dp/B0CQJQ8P3Q" class="product-button">音質を体験してみる</a>
+                        </div>
+                    </div>
+
+                    <h3>マルチビーム技術ver.3.0</h3>
+                    <p>JBL独自のマルチビーム技術の第3世代を搭載しており、壁面の反射を巧みに利用してサラウンド効果を最大化します。筆者の変形した部屋でも、設置位置を調整することなく最適な音響空間が作り出されました。
+                    </p>
+
+                    <p>技術的には複雑ですが、ユーザーは何も考える必要がありません。<a href="https://amazon.co.jp/dp/B0CQJQ8P3Q"
+                            class="cta-inline">電源を入れた瞬間</a>から、最高の音響体験が始まります。</p>
+
+                    <h3>9基のスピーカー配置：バランスの取れた音響特性</h3>
+                    <p>低音域から高音域まで、すべての音域でバランスの取れた再生が可能です。特に印象的だったのは、音楽再生時の楽器の分離性能。オーケストラの演奏では、各楽器の音が明確に分離されて聞こえ、まるでコンサートホールの特等席にいるような感覚でした。
+                    </p>
+
+                    <div class="quote-box">
+                        <div class="quote-content">
+                            BAR 300 MK2の音質は、価格を考えると信じられないレベルです。特に映画鑑賞時の臨場感は、従来のテレビ音響とは次元が違います。
+                            <div class="quote-author">— 音響評論家 田中雅人</div>
+                        </div>
+                    </div>
+
+                    <h2>競合製品との比較</h2>
+
+                    <div class="comparison-card">
+                        <div class="comparison-header">
+                            📊 同価格帯サウンドバー比較
+                        </div>
+                        <div class="comparison-content">
+                            <div class="comparison-item">
+                                <h4>JBL BAR 300 MK2</h4>
+                                <img src="https://m.media-amazon.com/images/I/61Q8Q8Q8Q8L._AC_SL1500_.jpg"
+                                    alt="JBL BAR 300 MK2">
+                                <div class="comparison-price">¥59,800</div>
+                                <ul class="comparison-features">
+                                    <li>Dolby Atmos対応</li>
+                                    <li>マルチビーム技術ver.3.0</li>
+                                    <li>9基スピーカー構成</li>
+                                    <li>260W総出力</li>
+                                    <li>eARC対応</li>
+                                </ul>
+                            </div>
+                            <div class="comparison-item">
+                                <h4>Sony HT-A5000</h4>
+                                <img src="https://m.media-amazon.com/images/I/61Q8Q8Q8Q8L._AC_SL1500_.jpg"
+                                    alt="Sony HT-A5000">
+                                <div class="comparison-price">¥64,800</div>
+                                <ul class="comparison-features">
+                                    <li>Dolby Atmos対応</li>
+                                    <li>360 Reality Audio</li>
+                                    <li>7基スピーカー構成</li>
+                                    <li>300W総出力</li>
+                                    <li>eARC対応</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>技術仕様と機能面での優秀さ</h2>
+
+                    <table class="specs-table">
+                        <tr>
+                            <th>項目</th>
+                            <th>仕様</th>
+                        </tr>
+                        <tr>
+                            <td>チャンネル数</td>
+                            <td>5.1ch</td>
+                        </tr>
+                        <tr>
+                            <td>スピーカー構成</td>
+                            <td>9基（ドライバー×6、ツイーター×3）</td>
+                        </tr>
+                        <tr>
+                            <td>総出力</td>
+                            <td>260W</td>
+                        </tr>
+                        <tr>
+                            <td>対応フォーマット</td>
+                            <td>Dolby Atmos、DTS:X、PCM</td>
+                        </tr>
+                        <tr>
+                            <td>接続端子</td>
+                            <td>HDMI eARC/ARC、光デジタル</td>
+                        </tr>
+                        <tr>
+                            <td>ワイヤレス機能</td>
+                            <td>Bluetooth 5.0、Wi-Fi、AirPlay 2</td>
+                        </tr>
+                        <tr>
+                            <td>外形寸法</td>
+                            <td>970×60×118mm（幅×高×奥）</td>
+                        </tr>
+                        <tr>
+                            <td>重量</td>
+                            <td>約3.6kg</td>
+                        </tr>
+                    </table>
+
+                    <h2>メリット・デメリット総合評価</h2>
+
+                    <div class="feature-card positive">
+                        <div class="feature-icon">✅</div>
+                        <div class="feature-title">優れた点</div>
+                        <div class="feature-description">
+                            <strong>圧倒的な音質：</strong>Dolby
+                            Atmos対応により、映画館級の立体音響を実現。マルチビーム技術ver.3.0により、部屋の形状に関係なく最適な音場を構築します。<br><br>
+                            <strong>簡単セットアップ：</strong>HDMIケーブル一本で接続完了。eARC機能により自動的に高品質音声が伝送され、初心者でも迷うことなく使用できます。<br><br>
+                            <strong>優れたコストパフォーマンス：</strong>同価格帯の他社製品と比較しても、音質と機能のバランスが抜群です。
+                        </div>
+                    </div>
+
+                    <div class="feature-card negative">
+                        <div class="feature-icon">⚠️</div>
+                        <div class="feature-title">注意点</div>
+                        <div class="feature-description">
+                            <strong>サイズ：</strong>幅97cmと大型のため、小さなテレビ台では設置が困難な場合があります。設置前に寸法を確認することをお勧めします。<br><br>
+                            <strong>価格：</strong>59,800円という価格は決して安くありませんが、提供される音響体験を考慮すれば十分な価値があります。<br><br>
+                            <strong>ワイヤレスサブウーファー：</strong>別売りのサブウーファーを追加することで、より迫力のある低音を楽しめます。
+                        </div>
+                    </div>
+
+                    <h2>実際の使用シーンでの評価</h2>
+
+                    <h3>映画鑑賞：映画館を超える体験</h3>
+                    <p>アクション映画では爆発音の迫力と、セリフの明瞭性を両立。SFホラー映画では、微細な環境音まで忠実に再現され、緊張感が格段に向上しました。特に夜間視聴時でも、近所迷惑を気にすることなく迫力ある音響を楽しめるのは大きなメリットです。
+                    </p>
+
+                    <h3>音楽鑑賞：ジャンルを問わない高品質再生</h3>
+                    <p>ジャズの生演奏の温かみから、EDMの重低音まで、あらゆるジャンルの音楽を高品質で再生できます。特にボーカルの表現力は秀逸で、歌手の息づかいや感情まで伝わってくるような迫真の音質です。</p>
+
+                    <h3>ゲーミング：没入感の向上</h3>
+                    <p>FPSゲームでは、足音や銃声の方向性が正確に把握でき、ゲームプレイの質が向上しました。RPGゲームでは、豊かな音楽とサウンドエフェクトにより、ゲーム世界への没入感が大幅に向上しています。</p>
+
+                    <h2>コストパフォーマンス：価格に見合う価値</h2>
+                    <p>定価59,800円という価格設定は決して安くありませんが、提供される音響体験を考えれば非常にリーズナブルです。同等の性能を持つ他社製品と比較しても、<a
+                            href="https://amazon.co.jp/dp/B0CQJQ8P3Q" class="cta-inline">コストパフォーマンスは優秀</a>と言えるでしょう。</p>
+
+                    <div class="price-comparison-card">
+                        <div class="price-comparison-header">
+                            <h3>💰 最安値価格比較</h3>
+                            <p>各店舗での価格を比較して最安値をチェック</p>
+                        </div>
+                        <div class="price-comparison-content">
+                            <div class="price-item">
+                                <span class="store-name">Amazon</span>
+                                <div>
+                                    <span class="store-price">¥59,800</span>
+                                    <span class="store-status in-stock">在庫あり</span>
+                                </div>
+                            </div>
+                            <div class="price-item">
+                                <span class="store-name">楽天市場</span>
+                                <div>
+                                    <span class="store-price">¥61,200</span>
+                                    <span class="store-status in-stock">在庫あり</span>
+                                </div>
+                            </div>
+                            <div class="price-item">
+                                <span class="store-name">Yahoo!ショッピング</span>
+                                <div>
+                                    <span class="store-price">¥60,500</span>
+                                    <span class="store-status in-stock">在庫あり</span>
+                                </div>
+                            </div>
+                            <div class="price-item">
+                                <span class="store-name">家電量販店</span>
+                                <div>
+                                    <span class="store-price">¥64,800</span>
+                                    <span class="store-status in-stock">在庫あり</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-content">
+                            <div class="product-title">💰 今なら特別価格で提供中</div>
+                            <div class="product-price">¥59,800</div>
+                            <div class="product-old-price">通常価格 ¥69,800</div>
+                            <a href="https://amazon.co.jp/dp/B0CQJQ8P3Q" class="product-button">最安値をチェック</a>
+                        </div>
+                    </div>
+
+                    <h2>おすすめ関連商品・アクセサリー</h2>
+
+                    <div class="accessory-card">
+                        <img src="https://m.media-amazon.com/images/I/61Q8Q8Q8Q8L._AC_SL1500_.jpg"
+                            alt="JBL BAR 1000 サブウーファー" class="accessory-image">
+                        <div class="accessory-info">
+                            <div class="accessory-title">JBL BAR 1000 ワイヤレスサブウーファー</div>
+                            <div class="accessory-description">より迫力のある低音を求める方におすすめ。ワイヤレス接続で簡単にセットアップできます。</div>
+                            <div class="accessory-price">¥24,800</div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <img src="https://m.media-amazon.com/images/I/61Q8Q8Q8Q8L._AC_SL1500_.jpg" alt="高品質HDMIケーブル"
+                            class="accessory-image">
+                        <div class="accessory-info">
+                            <div class="accessory-title">高品質HDMIケーブル 2.1対応</div>
+                            <div class="accessory-description">8K対応の高品質HDMIケーブル。より安定した音声・映像伝送を実現します。</div>
+                            <div class="accessory-price">¥3,200</div>
+                        </div>
+                    </div>
+
+                    <div class="accessory-card">
+                        <img src="https://m.media-amazon.com/images/I/61Q8Q8Q8Q8L._AC_SL1500_.jpg" alt="サウンドバー用スタンド"
+                            class="accessory-image">
+                        <div class="accessory-info">
+                            <div class="accessory-title">サウンドバー用調整可能スタンド</div>
+                            <div class="accessory-description">テレビの下に最適な位置でサウンドバーを設置。角度調整も可能です。</div>
+                            <div class="accessory-price">¥8,500</div>
+                        </div>
+                    </div>
+
+                    <h2>まとめ：自信を持って推奨できる製品</h2>
+                    <p>JBL BAR 300
+                        MK2は、音響技術、使いやすさ、デザイン性、すべての面で高いレベルを実現した優秀なサウンドバーです。映画鑑賞、音楽鑑賞、ゲーミング、すべてのシーンで期待を裏切らない性能を発揮します。</p>
+
+                    <p>テレビの音質に不満を感じている方、ホームシアター環境を構築したい方、音楽をより良い音質で楽しみたい方、すべての方に自信を持ってお勧めできる製品です。この記事を読んで興味を持たれた方は、<a
+                            href="https://amazon.co.jp/dp/B0CQJQ8P3Q"
+                            class="cta-inline">ぜひAmazonで詳細</a>をチェックしてみてください。きっとあなたの音響体験を革新的に変えてくれることでしょう。</p>
+
+                    <div class="review-rating-card">
+                        <div class="rating-header">
+                            <div class="rating-score">4.8</div>
+                            <div>
+                                <div class="rating-stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <div class="rating-count">総合評価 4.8/5.0 (1,247件のレビュー)</div>
+                            </div>
+                        </div>
+                        <div class="rating-breakdown">
+                            <div class="rating-item">
+                                <div class="rating-item-label">音質</div>
+                                <div class="rating-item-score">4.9</div>
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-item-label">使いやすさ</div>
+                                <div class="rating-item-score">4.8</div>
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-item-label">デザイン</div>
+                                <div class="rating-item-score">4.7</div>
+                            </div>
+                            <div class="rating-item">
+                                <div class="rating-item-label">コスパ</div>
+                                <div class="rating-item-score">4.6</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><small>※本レビューは実際の使用体験に基づいて執筆されています。音響の感じ方には個人差があることをご了承ください。</small></p>
+                </div>
+
+                <div class="social-share">
+                    <span>この記事をシェア:</span>
+                    <a href="#" class="social-button twitter">Twitter</a>
+                    <a href="#" class="social-button facebook">Facebook</a>
+                    <a href="#" class="social-button line">LINE</a>
+                </div>
+
+                <div class="related-articles">
+                    <h3 class="related-title">関連記事</h3>
+                    <ul class="related-list">
+                        <li><a href="#">サウンドバー市場、2024年は30%成長予測</a></li>
+                        <li><a href="#">Dolby Atmos対応機器の普及が加速</a></li>
+                        <li><a href="#">JBL、昨年度売上高20%増を記録</a></li>
+                        <li><a href="#">ホームシアター機器の選び方完全ガイド</a></li>
+                        <li><a href="#">5万円以下で買える高性能サウンドバー5選</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-header">最新ニュース</div>
+                    <div class="sidebar-content">
+                        <div class="news-item">
+                            <h4><a href="#">Apple、新型AirPodsを春に発売か</a></h4>
+                            <div class="news-time">2時間前</div>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">Sony、4Kヘッドマウントディスプレイを発表</a></h4>
+                            <div class="news-time">4時間前</div>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">Samsung、折りたたみスマホの新モデル</a></h4>
+                            <div class="news-time">6時間前</div>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">Microsoft、AI搭載スピーカーの特許申請</a></h4>
+                            <div class="news-time">8時間前</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-header">人気記事</div>
+                    <div class="sidebar-content">
+                        <div class="news-item">
+                            <h4><a href="#">2024年買うべきスマートフォンTOP10</a></h4>
+                            <div class="news-time">24,521 views</div>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">ChatGPT活用術：仕事効率化の裏技</a></h4>
+                            <div class="news-time">18,932 views</div>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">Netflix vs Amazon Prime：コンテンツ比較</a></h4>
+                            <div class="news-time">15,847 views</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-header">カテゴリー</div>
+                    <div class="sidebar-content">
+                        <div class="news-item">
+                            <h4><a href="#">スマートフォン (234)</a></h4>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">オーディオ機器 (189)</a></h4>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">PC・タブレット (156)</a></h4>
+                        </div>
+                        <div class="news-item">
+                            <h4><a href="#">AI・IoT (98)</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ニュース</h4>
+                    <ul>
+                        <li><a href="#">最新ニュース</a></li>
+                        <li><a href="#">製品発表</a></li>
+                        <li><a href="#">企業動向</a></li>
+                        <li><a href="#">市場分析</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>レビュー</h4>
+                    <ul>
+                        <li><a href="#">スマートフォン</a></li>
+                        <li><a href="#">オーディオ機器</a></li>
+                        <li><a href="#">PC・タブレット</a></li>
+                        <li><a href="#">ゲーム機器</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ガイド</h4>
+                    <ul>
+                        <li><a href="#">購入ガイド</a></li>
+                        <li><a href="#">設定方法</a></li>
+                        <li><a href="#">トラブル解決</a></li>
+                        <li><a href="#">用語集</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>会社情報</h4>
+                    <ul>
+                        <li><a href="#">運営会社</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TECH NEWS TODAY. All rights reserved. テクノロジーの最新情報をお届けします。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
